@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        loginBtn=(Button)findViewById(R.id.button);
+        loginBtn=(Button)findViewById(R.id.buttonGoogle);
 
      /*   loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,9 +30,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     public void open(View view)
     {
-        Intent i=new Intent(this,RetailerActivity.class);
-        startActivity(i);
+        try {
+            Intent i = new Intent(this, RetailerActivity.class);
+            startActivity(i);
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 }
