@@ -11,6 +11,23 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".ui.login.LoginActivity">
 
+    <Button
+        android:id="@+id/loginGoogle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="191dp"
+        android:enabled="false"
+        android:text="Sign In With Google"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login" />
+
     <EditText
         android:id="@+id/username"
         android:layout_width="0dp"
@@ -73,4 +90,19 @@
         app:layout_constraintStart_toStartOf="@+id/password"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.3" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="211dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Forgot Password"
+        android:textAppearance="@style/Theme.AppCompat.DayNight.NoActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
