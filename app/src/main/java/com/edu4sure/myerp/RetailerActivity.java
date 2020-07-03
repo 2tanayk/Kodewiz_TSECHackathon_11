@@ -2,9 +2,9 @@ package com.edu4sure.myerp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -43,8 +43,16 @@ public class RetailerActivity extends AppCompatActivity {
         recyclerView.setAdapter(rAdapter);
 
 
-
     }//onCreate ends
-
-
+    public void onClickLinearLayout(View v)
+    {
+        try {
+            Intent i = new Intent(this, TableActivity.class);
+            startActivity(i);
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
 }//RetailerActivity ends
