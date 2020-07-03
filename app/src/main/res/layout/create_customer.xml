@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:id="@+id/customCV"
+    android:padding="10dp"
+    android:layout_margin="5dp">
+
+    <LinearLayout
+        android:id="@+id/customerLL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/customerImg"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/smarttv" />
+
+        <TextView
+            android:id="@+id/customerTextView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="Smart TV"
+            android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/cartBtn"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="center"
+                android:src="@drawable/ic_baseline_add_shopping_cart_24"
+                android:visibility="visible" />
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

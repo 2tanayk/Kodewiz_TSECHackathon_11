@@ -13,7 +13,7 @@ import java.util.List;
 
 public class RetailerActivity extends AppCompatActivity {
     View v;
-    private List<Create> list;
+    private List<CreateRetailer> list;
     private RecyclerView recyclerView;
     RetailerAdapter rAdapter;
 
@@ -28,11 +28,11 @@ public class RetailerActivity extends AppCompatActivity {
 
         list=new ArrayList<>();
 
-        list.add(new Create(R.drawable.order,"Order"));
-        list.add(new Create(R.drawable.inventory,"Inventory"));
-        list.add(new Create(R.drawable.analysis,"Analysis"));
-        list.add(new Create(R.drawable.customer,"Customer"));
-        list.add(new Create(R.drawable.feedback,"Feedback"));
+        list.add(new CreateRetailer(R.drawable.order,"Order"));
+        list.add(new CreateRetailer(R.drawable.inventory,"Inventory"));
+        list.add(new CreateRetailer(R.drawable.analysis,"Analysis"));
+        list.add(new CreateRetailer(R.drawable.customer,"Customer"));
+        list.add(new CreateRetailer(R.drawable.feedback,"Feedback"));
 
         recyclerView=(RecyclerView)findViewById(R.id.retailerRV);
 
