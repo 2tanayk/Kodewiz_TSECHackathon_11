@@ -83,7 +83,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="sans-serif-black"
-        android:onClick="open"
+        android:onClick="openC"
         android:text="Sign In With Google"
         android:textAppearance="@style/Theme.AppCompat.DayNight.NoActionBar"
         android:textSize="12sp"

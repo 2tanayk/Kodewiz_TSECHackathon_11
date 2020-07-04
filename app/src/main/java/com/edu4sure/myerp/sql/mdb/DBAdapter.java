@@ -51,6 +51,7 @@ public class DBAdapter
         {
             db = helper.getWritableDatabase();
             Cursor c = db.query(Constants.TB_NAME, columns, null, null, null,null,null);
+
             SpaceCraft s;
             if (c != null)
             {

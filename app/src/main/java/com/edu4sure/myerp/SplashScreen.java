@@ -2,10 +2,14 @@ package com.edu4sure.myerp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Menu;
+
+import com.edu4sure.myerp.sql.mdb.DBHelper;
 
 public class SplashScreen extends AppCompatActivity {
      //splash screen duration
@@ -26,6 +30,7 @@ public class SplashScreen extends AppCompatActivity {
                 SplashScreen.this.finish();
             }//run ends
         }, SPLASH_DISPLAY_LENGTH);
+
 
     }//onCreate ends
 }//SplashScreen ends

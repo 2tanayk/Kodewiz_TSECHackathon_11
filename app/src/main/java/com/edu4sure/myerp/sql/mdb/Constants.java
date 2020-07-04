@@ -11,6 +11,7 @@ public class Constants
     static final String TB_NAME = "orders";
     static final int DB_VERSION = 1;
 
+
     static final String CREATE_TB = "CREATE TABLE `orders` (\n" +
             "  `order_id` int(11) NOT NULL AUTO_INCREMENT,\n" +
             "  `customer_id` int(11) NOT NULL,\n" +
@@ -28,4 +29,5 @@ public class Constants
             "  CONSTRAINT `fk_orders_shippers` FOREIGN KEY (`shipper_id`) REFERENCES `shippers` (`shipper_id`) ON UPDATE CASCADE\n" +
             ") ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;";
     static final String DROP_TB = "DROP TABLE IF EXISTS " + TB_NAME;
+
 }

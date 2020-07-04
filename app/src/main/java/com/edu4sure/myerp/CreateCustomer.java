@@ -1,10 +1,9 @@
 package com.edu4sure.myerp;
 
-public class Create {
+public class CreateCustomer {
     private int image;
     private String name;
-
-    public Create(int image, String name) {
+    public CreateCustomer(int image, String name) {
         this.image = image;
         this.name=name;
     }//constructor ends
@@ -24,4 +23,4 @@ public class Create {
     public void setName(String name) {
         this.name = name;
     }
-}//Create ends
+}
