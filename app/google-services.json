@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "24276212067",
+    "firebase_url": "https://my-erp-app.firebaseio.com",
+    "project_id": "my-erp-app",
+    "storage_bucket": "my-erp-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24276212067:android:8f354383248e28f71a1b56",
+        "android_client_info": {
+          "package_name": "com.edu4sure.myerp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "24276212067-qtotf8lq7rkoorvjbjet4t0os2gaprb5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.edu4sure.myerp",
+            "certificate_hash": "99ef6e2bb33e6023afd3db763ebf8b059ab1a881"
+          }
+        },
+        {
+          "client_id": "24276212067-fu2rea2160pb8igupvn3fftvfck4jn9l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_P29RYoUB4K4nl8j7VdNF5rn4I7xyW4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "24276212067-fu2rea2160pb8igupvn3fftvfck4jn9l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
