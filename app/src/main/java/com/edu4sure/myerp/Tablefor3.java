@@ -22,7 +22,12 @@ public class Tablefor3 extends AppCompatActivity {
         setContentView(R.layout.activity_tablefor3);
         Intent i=getIntent();
        int j= i.getIntExtra("table",0);
+
         if(j==1){
+            column_1.add("Customer id");
+            column_2.add("Customer name");
+            column_3.add("Address");
+            column_4.add("Phone number");
         Cursor c1=MainActivity.database.rawQuery("select * from Customers",null);
         c1.moveToFirst();
         if(c1.getCount()!=0){
@@ -41,6 +46,10 @@ public class Tablefor3 extends AppCompatActivity {
             column_4.add("NULL");
         }}
         else if(j==2){
+            column_1.add("Customer id");
+            column_2.add("Customer name");
+            column_3.add("Feedback");
+            column_4.add("Rating");
             Log.i("inside","feedback");
             Cursor c1=MainActivity.database.rawQuery("select * from Feedback",null);
             c1.moveToFirst();
@@ -61,6 +70,10 @@ public class Tablefor3 extends AppCompatActivity {
         }
         else if(j==3){
             Log.i("inside","analyis");
+            column_1.add("Product id");
+            column_2.add("Product name");
+            column_3.add("Total sales");
+            column_4.add("Profit");
             Cursor c1=MainActivity.database.rawQuery("Select P.Product_id,P.ProductName,sum(O.Qauntity) ,sum(O.Qauntity)*P.Price    from Orders O join Products p on p.Product_id=o.Product_id group by P.Product_id order by sum(O.Qauntity) ",null);
             c1.moveToFirst();
             if(c1.getCount()!=0){

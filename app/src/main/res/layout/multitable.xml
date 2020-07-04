@@ -10,32 +10,45 @@
 
     <TextView
         android:id="@+id/text1"
-        android:layout_width="120dp"
+        android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:padding="10dp"
         android:text="hey"
+        android:textSize="10dp"
         android:textAlignment="center"
-        android:textSize="20dp" />
+        android:fontFamily="sans-serif-black" />
 
     <TextView
         android:id="@+id/text2"
-        android:layout_width="120dp"
+        android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:padding="10dp"
         android:text="hey"
+        android:textSize="10dp"
         android:textAlignment="center"
-        android:textSize="20dp" />
+        android:fontFamily="sans-serif-black" />
 
     <TextView
         android:id="@+id/text3"
-        android:layout_width="120dp"
+        android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:padding="10dp"
         android:text="hey"
+        android:textSize="10dp"
         android:textAlignment="center"
-        android:textSize="20dp" />
+        android:fontFamily="sans-serif-black" />
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:text="hey"
+        android:textSize="10dp"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-black" />
 
 </LinearLayout>
