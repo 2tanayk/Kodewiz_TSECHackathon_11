@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.edu4sure.myerp">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProductsActivity"></activity>
+        <activity android:name=".FragHolder"></activity>
+        <activity android:name=".ProductsActivity" />
         <activity android:name=".Tablefor3" />
         <activity android:name=".OrdertableActivity" />
         <activity android:name=".TableActivity" />
