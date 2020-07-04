@@ -42,7 +42,6 @@ class Order_Adaptere  extends ArrayAdapter<String> {
         TextView t2=convertView.findViewById(R.id.textvie2);
         TextView t3=convertView.findViewById(R.id.textvie3);
         TextView t4=convertView.findViewById(R.id.textvie4);
-        TextView t5=convertView.findViewById(R.id.textvie5);
 
 
 
@@ -51,8 +50,6 @@ class Order_Adaptere  extends ArrayAdapter<String> {
             t2.setText(data2.get(position));
             t3.setText(data3.get(position));
             t4.setText(data4.get(position));
-            t5.setText(data5.get(position));
-
         return convertView;
     }
 }
