@@ -13,46 +13,45 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class RetailerAdapter extends RecyclerView.Adapter<RetailerAdapter.MyViewHolder>
-{
-    Context mC;
-    List<CreateRetailer> rlist;
+public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.MyViewHolder> {
+    List<CreateCustomer> clist;
+    Context mContext;
 
-    public RetailerAdapter(Context mC,List<CreateRetailer> rlist) {
-        this.mC = mC;
-        this.rlist=rlist;
+    public CustomerAdapter(Context mContext,List<CreateCustomer> clist) {
+        this.mContext = mContext;
+        this.clist=clist;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v;
-        v=LayoutInflater.from(mC).inflate(R.layout.create_retailer,parent,false);
+        v= LayoutInflater.from(mContext).inflate(R.layout.create_customer,parent,false);
         MyViewHolder myViewHolder=new MyViewHolder(v);
         return myViewHolder;
+
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.img.setImageResource(rlist.get(position).getImage());
-        holder.txt.setText(rlist.get(position).getName());
+        holder.img.setImageResource(clist.get(position).getImage());
+        holder.txt.setText(clist.get(position).getName());
 
     }
 
     @Override
     public int getItemCount() {
-        return rlist.size();
+        return clist.size();
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder
+     public static class MyViewHolder extends RecyclerView.ViewHolder
     {
         private ImageView img;
         private TextView txt;
-        private ImageButton ibb;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            img=itemView.findViewById(R.id.retailerImg);
-            txt=itemView.findViewById(R.id.retailerTextView);
-        }//ViewHolder ends
-    }//class ends
-}
+            img=itemView.findViewById(R.id.customerImg);
+            txt=itemView.findViewById(R.id.customerTextView);
+        }
+    }
+}//class ends
