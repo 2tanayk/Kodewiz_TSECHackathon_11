@@ -1,5 +1,6 @@
 package com.edu4sure.myerp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -10,7 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
+
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,27 +27,83 @@ public class CustomerActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     CustomerAdapter cAdapter;
     private DrawerLayout drawer;
+    Intent intent1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer);
 
         list=new ArrayList<>();
+
         fill();
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+       Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         drawer=findViewById(R.id.drawer_layout);
+
+       NavigationView navigationView = findViewById(R.id.nav_view);
+
+       navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+           @Override
+           public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+               switch (menuItem.getItemId()) {
+                   case R.id.nav_cart:
+                       getMyIntent();
+                       intent1.putExtra("key",0);
+                       startActivity(intent1);
+                        //this.startActvity(intent1);
+                       //Toast.makeText(getApplicationContext(),"Hello",Toast.LENGTH_SHORT).show();
+                      // getSupportFragmentManager().beginTransaction().replace(R.id.customerRV,new CartManagerFragment()).commit();
+                       break;
+                   case R.id.nav_orders:
+                       getMyIntent();
+                       intent1.putExtra("key",1);
+                       startActivity(intent1);
+                       //Toast.makeText(getApplicationContext(),"Hello",Toast.LENGTH_SHORT).show();
+                      // getSupportFragmentManager().beginTransaction().replace(R.id.customerRV,new OrdersFragment()).commit();
+                       break;
+                   case R.id.nav_feedback:
+                       getMyIntent();
+                       intent1.putExtra("key",2);
+                       startActivity(intent1);
+                       //Toast.makeText(getApplicationContext(),"Hello",Toast.LENGTH_SHORT).show();
+                      // getSupportFragmentManager().beginTransaction().replace(R.id.customerRV,new FeedbackFragment()).commit();
+                       break;
+                   case R.id.nav_edit:
+                       getMyIntent();
+                       intent1.putExtra("key",3);
+                       startActivity(intent1);
+                      // Toast.makeText(getApplicationContext(),"Hello",Toast.LENGTH_SHORT).show();
+                       //getSupportFragmentManager().beginTransaction().replace(R.id.customerRV,new EditProfileFragment()).commit();
+                       break;
+
+                 /*  case R.id.nav_logout:
+                       Toast.makeText(getApplicationContext(),"Hello",Toast.LENGTH_SHORT).show();
+                       break;*/
+               }//switch case
+               drawer.closeDrawer(GravityCompat.START);
+               return true;
+           }
+       });
+
+
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+
     }//on Create ends
+
+    public void getMyIntent()
+    {
+        intent1=new Intent(getApplicationContext(),FragHolder.class);
+
+    }
 
     public void fill()
     {
@@ -52,7 +114,7 @@ public class CustomerActivity extends AppCompatActivity {
         list.add(new CreateCustomer(R.drawable.nokia,"Nokia"));
         list.add(new CreateCustomer(R.drawable.laptop,"Laptop"));
         list.add(new CreateCustomer(R.drawable.tv,"TV"));
-        list.add(new CreateCustomer(R.drawable.laptop,"Washing Machine"));
+        list.add(new CreateCustomer(R.drawable.laptop,"Laptop"));
 
         recyclerView=(RecyclerView)findViewById(R.id.customerRV);
         cAdapter =new CustomerAdapter(this,list);
@@ -68,4 +130,6 @@ public class CustomerActivity extends AppCompatActivity {
             super.onBackPressed();
         }
     }
+
+
 }//Customer ends
