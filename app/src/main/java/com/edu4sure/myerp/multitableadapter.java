@@ -38,11 +38,9 @@ import java.util.ArrayList;
         TextView t=convertView.findViewById(R.id.text1);
         TextView t1=convertView.findViewById(R.id.text2);
         TextView t2=convertView.findViewById(R.id.text3);
-        TextView t3=convertView.findViewById(R.id.text4);
         t.setText(data.get(position));
         t1.setText(data1.get(position));
         t2.setText(data2.get(position));
-        t3.setText(data3.get(position));
         return convertView;
     }
 }
