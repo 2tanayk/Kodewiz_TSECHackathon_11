@@ -78,7 +78,7 @@ public void add1(View v){
                 nameEditText = (EditText) d.findViewById(R.id.nameEditTxt);
                 nameEditText.findViewById(R.id.nameEditTxt35);
 
-                saveBtn = (Button) d.findViewById(R.id.add2);
+               // saveBtn = (Button) d.findViewById(R.id.add2);
 
 
                 //SAVE
@@ -87,8 +87,6 @@ public void add1(View v){
                     public void onClick(View v) {
                         String status=  nameEditText.getText().toString();
                         String query="Update  `Orders` VALUES SET Status ="+status+"where order id="+Integer.toString(pos);
-                     
-
 
                     }
                 });

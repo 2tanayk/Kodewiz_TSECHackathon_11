@@ -99,6 +99,40 @@ public class RetailerActivity extends AppCompatActivity {
                         }
                         break;
                     }
+                    case 2:
+                    {
+                        try {
+                            Intent i = new Intent(getApplicationContext(),Tablefor3.class);
+                            i.putExtra("table",3);
+                            startActivity(i);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        break;
+                    }
+                    case 3:
+                    {
+                        try {
+                            Intent i = new Intent(getApplicationContext(),Tablefor3.class);
+                            i.putExtra("table",1);
+                            startActivity(i);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        break;
+                    }
+                    case 4:
+                    {
+                        try {
+                            Intent i = new Intent(getApplicationContext(),Tablefor3.class);
+                            i.putExtra("table",2);
+                            startActivity(i);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        break;
+                    }
+
                 }
 
             }
