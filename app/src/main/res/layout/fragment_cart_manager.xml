@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-</LinearLayout>
+    <ListView
+        android:id="@+id/cartList"
+        android:layout_width="match_parent"
+        android:layout_height="505dp"
+        android:layout_above="@+id/Total"
+        android:layout_marginBottom="10dp" />
+
+
+    <TextView
+        android:id="@+id/Total"
+        android:layout_above="@+id/Next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Total Amount:"
+        android:textSize="30dp"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/Next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Next"
+        android:textSize="20dp"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:text="Items In Cart"
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+
+</RelativeLayout>
