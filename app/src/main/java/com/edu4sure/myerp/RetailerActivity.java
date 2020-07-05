@@ -69,7 +69,7 @@ public class RetailerActivity extends AppCompatActivity {
 //            @Override
 //            public void onItemClick(int position) {
 //               Toast.makeText(getApplicationContext(),"Clicked!"+position,Toast.LENGTH_SHORT).show();
-////                Log.e("Position:",position+"");
+
 //            }
 //        });
           try {
