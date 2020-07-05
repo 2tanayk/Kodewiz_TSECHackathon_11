@@ -31,7 +31,9 @@ public class OrdertableActivity extends AppCompatActivity {
     ListView l ;
     int pos=0;
 Button  saveBtn;
+public void add1(View v){
 
+}
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +66,40 @@ Button  saveBtn;
         }
         l = findViewById(R.id.listview);
         l.setAdapter(new Order_Adaptere(this, R.layout.orderstablelist, column_1, column_2, column_3, column_4,column_5,column_6));
+        l.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+                pos=i;
+                Dialog d = new Dialog(OrdertableActivity.this);
+                d.setTitle("CHANGE STATUS");
+                d.setContentView(R.layout.customdialog);
+
+                //INITIALIZE VIEWS
+                nameEditText = (EditText) d.findViewById(R.id.nameEditTxt);
+                nameEditText.findViewById(R.id.nameEditTxt35);
+
+                saveBtn = (Button) d.findViewById(R.id.add2);
 
 
-        }}
+                //SAVE
+                saveBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String status=  nameEditText.getText().toString();
+                        String query="Update  `Orders` VALUES SET Status ="+status+"where order id="+Integer.toString(pos);
+                       /*column_1.add(id);
+                       column_2.add(name);
+                       column_3.add(quantity);
+                       column_4.add(price);
+                       MainActivity.database.execSQL(query,null);
+                       l.notify();*/
+
+
+                    }
+                });
+                 return  true;
+    }
+        });
+    }
+}
 

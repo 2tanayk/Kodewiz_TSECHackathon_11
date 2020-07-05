@@ -47,7 +47,7 @@ public class RetailerActivity extends AppCompatActivity {
     public void onClickLinearLayout(View v)
     {
         try {
-            Intent i = new Intent(this, Tablefor3.class);
+            Intent i = new Intent(this, ProductsActivity.class);
             i.putExtra("table",2);
             startActivity(i);
         }
