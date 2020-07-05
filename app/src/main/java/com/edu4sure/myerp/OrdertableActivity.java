@@ -87,12 +87,7 @@ public void add1(View v){
                     public void onClick(View v) {
                         String status=  nameEditText.getText().toString();
                         String query="Update  `Orders` VALUES SET Status ="+status+"where order id="+Integer.toString(pos);
-                       /*column_1.add(id);
-                       column_2.add(name);
-                       column_3.add(quantity);
-                       column_4.add(price);
-                       MainActivity.database.execSQL(query,null);
-                       l.notify();*/
+                     
 
 
                     }
