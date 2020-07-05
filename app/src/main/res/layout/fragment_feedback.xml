@@ -15,29 +15,46 @@
         android:layout_marginRight="24dp"
         android:layout_marginLeft="24dp"
         android:hint="Enter Name" />
+
     <EditText
         android:id="@+id/customerId"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:hint="Enter Phone Number"
         android:layout_above="@+id/address"
-        android:layout_marginRight="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="24dp"
+        android:hint="id" />
+
+    <EditText
+        android:id="@+id/fId"
+        android:layout_width="372dp"
+        android:layout_height="87dp"
+        android:layout_above="@id/button56"
+        android:layout_below="@id/customerId"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="155dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="139dp"
+        android:hint="Feedbacl" />
+
     <EditText
 
         android:id="@+id/feedback"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:hint="Enter Rating out of 5 :"
+        android:layout_width="372dp"
+        android:layout_height="93dp"
         android:layout_above="@+id/button"
-        android:layout_marginRight="24dp"
+        android:layout_below="@id/name"
+        android:layout_alignBottom="@id/name"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="20dp"
-        android:inputType="number"/>
+        android:layout_marginTop="142dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="-235dp"
+        android:hint="Enter Rating out of 5 :"
+        android:inputType="number" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button56"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:text="Submit"
