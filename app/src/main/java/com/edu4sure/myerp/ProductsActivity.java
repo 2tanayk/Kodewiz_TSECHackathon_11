@@ -24,6 +24,46 @@ public class ProductsActivity extends AppCompatActivity {
     EditText nameEditText,t1,t2,t3;
     Button saveBtn;
     int pos=0;
+    public void add(View v){
+
+                Dialog d = new Dialog(ProductsActivity.this);
+                d.setTitle("ADD PRODUCTS");
+                d.setContentView(R.layout.customdialog);
+
+                //INITIALIZE VIEWS
+                nameEditText = (EditText) d.findViewById(R.id.nameEditTxt);
+                t1=d.findViewById(R.id.nameEditTxt1);
+                t2=d.findViewById(R.id.nameEditTxt2);
+                t3=d.findViewById(R.id.nameEditTxt3);
+                saveBtn = (Button) d.findViewById(R.id.saveBtn);
+
+
+                //SAVE
+                saveBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String id=  nameEditText.getText().toString();
+                   String name=  "\""+t1.getText().toString()+"\"";
+                        String quantity=  t2.getText().toString();
+                        String price=t3.getText().toString();
+                        Log.i("info","INSERT INTO `Products` VALUES ("+id+","+name+","+quantity+","+price+")");
+                        String query="INSERT INTO `Products` VALUES ("+id+","+name+","+quantity+","+price+")";
+                       /*column_1.add(id);
+                       column_2.add(name);
+                       column_3.add(quantity);
+                       column_4.add(price);
+                       MainActivity.database.execSQL(query,null);
+                       l.notify();*/
+
+
+                    }
+                });
+
+                //SHOW DIALOG
+                d.show();
+
+            }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
