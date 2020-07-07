@@ -59,7 +59,7 @@ public class ProductsActivity extends AppCompatActivity {
                     }
                 });
 
-                //SHOW DIALOG
+                
                 d.show();
 
             }

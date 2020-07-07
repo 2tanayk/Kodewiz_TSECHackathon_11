@@ -26,12 +26,15 @@ public class MainActivity extends AppCompatActivity {
         database.execSQL("drop table if exists Orders");
         database.execSQL(" Create table if not exists Orders(Order_id INT(1000),Price DOUBLE(10000000),Qauntity INT(100),Product_id INT(1000),Order_status VARCHAR(50),Customer_id INT(1000))");
          database.execSQL("INSERT INTO ORDERS VALUES(2,500000,60,1,'DONE',2)");
-         //database.execSQL("drop table Products");
+         database.execSQL("drop table if exists Products");
         database.execSQL(" Create table if not exists Products(Product_id INT(1000),ProductName VARCHAR(50),Qauntity INT(100),Price Double(1000000,1))");
         database.execSQL("INSERT INTO `Products` VALUES (1,'LAPTOP',70,500000), (2,'IPHONE',49,100000), (3,'ANDROID PHONE',38,25000), (4,'NOKIA',90,3400), (5,'WASHING MACHINE',94,33000), (6,'TV',14,20000), (7,'SMART TV',98,20), (8,'MOUSE',26,740);");
+        database.execSQL("drop table if exists Customers");
         database.execSQL(" Create table if not exists Customers(Customer_id INT(1000),CustomerName VARCHAR(50),CustomerAddres VARCHAR(5000),Phonenumber LONGINT(1000000))");
+        database.execSQL("INSERT INTO Customers VALUES(1,'TANAY','KANDIVALI',9833275839)");
+        database.execSQL("drop table if exists Feedback");
         database.execSQL("Create table if not exists Feedback(Customer_id INT(1000),CustomerName VARCHAR(50),Feedback VARCHAR(500),Rating INT(10))");
-
+        database.execSQL("INSERT INTO Feedback VALUES(1,'TANAY','GOOD',9)");
      /*   loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

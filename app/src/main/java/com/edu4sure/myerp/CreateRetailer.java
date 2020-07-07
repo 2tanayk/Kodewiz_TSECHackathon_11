@@ -3,7 +3,7 @@ package com.edu4sure.myerp;
 import android.widget.ImageButton;
 
 public class CreateRetailer {
-    private int image,ib;
+    private int image;
     private String name;
 
 
