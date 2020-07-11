@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -27,10 +28,10 @@ public class OrdertableActivity extends AppCompatActivity {
     ArrayList<String> column_5 = new ArrayList<String>();
     ArrayList<String> column_6 = new ArrayList<String>();
     EditText  nameEditText;
-    String rawQuery="update Orders set Order_status =";
     ListView l ;
     int pos=0;
 Button  saveBtn;
+
 public void add1(View v){
 
 }
@@ -39,13 +40,22 @@ public void add1(View v){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ordertable);
         Intent i=getIntent();
+        display();
+
+    }
+       public void display(){
+           column_1.clear();
+           column_2.clear();
+           column_3.clear();
+           column_4.clear();
+           SQLiteDatabase database = this.openOrCreateDatabase("Database", MODE_PRIVATE, null, null);
         column_1.add("Order id");
         column_2.add("Price");
         column_3.add("Quantity");
         column_4.add("Product_id");
         column_5.add("Order_status");
         column_6.add("Customer_id");
-        Cursor c1=MainActivity.database.rawQuery("select * from Orders",null);
+        Cursor c1=database.rawQuery("select * from Orders",null);
         c1.moveToFirst();
         if(c1.getCount()!=0){
            while(!c1.isAfterLast()){
@@ -66,33 +76,7 @@ public void add1(View v){
         }
         l = findViewById(R.id.listview);
         l.setAdapter(new Order_Adaptere(this, R.layout.orderstablelist, column_1, column_2, column_3, column_4,column_5,column_6));
-        l.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                pos=i;
-                Dialog d = new Dialog(OrdertableActivity.this);
-                d.setTitle("CHANGE STATUS");
-                d.setContentView(R.layout.customdialog);
 
-                //INITIALIZE VIEWS
-                nameEditText = (EditText) d.findViewById(R.id.nameEditTxt);
-                nameEditText.findViewById(R.id.nameEditTxt35);
-
-               // saveBtn = (Button) d.findViewById(R.id.add2);
-
-
-                //SAVE
-                saveBtn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        String status=  nameEditText.getText().toString();
-                        String query="Update  `Orders` VALUES SET Status ="+status+"where order id="+Integer.toString(pos);
-
-                    }
-                });
-                 return  true;
-    }
-        });
     }
 }
 
