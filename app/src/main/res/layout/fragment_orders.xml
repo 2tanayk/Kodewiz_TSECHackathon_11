@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark">
 
     <TextView
         android:id="@+id/OrdersLabel"
@@ -16,6 +17,8 @@
         android:text="Orders"
         android:textAlignment="center"
         android:textSize="60dp"
+        android:textColor="#50C878"
+        android:textColorHint="#50C878"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

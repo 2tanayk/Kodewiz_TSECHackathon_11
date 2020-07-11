@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Tablefor3">
+    tools:context=".Tablefor3"
+    android:background="@color/colorPrimaryDark">
 
     <ListView
         android:id="@+id/listview2"

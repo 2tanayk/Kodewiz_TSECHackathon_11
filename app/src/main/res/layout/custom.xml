@@ -6,20 +6,23 @@
     android:layout_margin="1dp"
     card_view:cardCornerRadius="10dp"
     card_view:cardElevation="5dp"
-
+android:background="@color/colorPrimaryDark"
     android:layout_height="match_parent">
 
 
     <LinearLayout
         android:layout_width="412dp"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/colorPrimaryDark">
 
         <!--INPUT VIEWS-->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nameLayout35"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:textColor="#50C878"
+            android:textColorHint="#50C878">
 
             <EditText
                 android:id="@+id/nameEditTxt35"
@@ -27,7 +30,8 @@
                 android:layout_height="wrap_content"
                 android:hint="Status"
                 android:singleLine="true"
-                android:textColor="#50C878"/>
+                android:textColor="#50C878"
+                android:textColorHint="#50C878"/>
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -38,7 +42,9 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:background="@color/colorAccent"
+            android:textColor="#50C878"
+            android:textColorHint="#50C878"
+            android:background="#4E534E"
             android:clickable="true"
             android:text="Save" />
 
