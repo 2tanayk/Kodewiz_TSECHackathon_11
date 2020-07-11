@@ -11,4 +11,8 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+    <style name="RatingBar">
+        <item name="colorControlNormal">#FFFFFF</item>
+        <item name="colorControlActivated">#50C878</item>
+    </style>
 </resources>

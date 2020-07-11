@@ -7,6 +7,7 @@
         android:layout_margin="1dp"
         card_view:cardCornerRadius="10dp"
         card_view:cardElevation="5dp"
+    android:background="@color/colorPrimaryDark"
 
         android:layout_height="match_parent">
 
@@ -14,57 +15,74 @@
         <LinearLayout
             android:layout_width="412dp"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-
+            android:orientation="vertical"
+            android:background="@color/colorPrimaryDark">
             <!--INPUT VIEWS-->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/nameLayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textColor="#50C878"
+                android:textColorHint="#50C878"
+                >
 
                 <EditText
                     android:id="@+id/nameEditTxt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Product_id"
+                    android:textColor="#50C878"
+                    android:textColorHint="#50C878"
                     android:singleLine="true" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/nameLayout1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textColor="#50C878"
+                android:textColorHint="#50C878">
 
                 <EditText
                     android:id="@+id/nameEditTxt1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Name"
+                    android:textColor="#50C878"
+                    android:textColorHint="#50C878"
                     android:singleLine="true" />
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/nameLayout2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textColor="#50C878"
+                android:textColorHint="#50C878">
 
                 <EditText
                     android:id="@+id/nameEditTxt2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Quantity"
+                    android:textColor="#50C878"
+                    android:textColorHint="#50C878"
                     android:singleLine="true" />
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/nameLayout3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textColor="#50C878"
+                android:textColorHint="#50C878">
 
                 <EditText
                     android:id="@+id/nameEditTxt3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Price"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    android:textColor="#50C878"
+                    android:textColorHint="#50C878" />
             </com.google.android.material.textfield.TextInputLayout>
             <!--BUTTON-->
             <Button
@@ -72,9 +90,10 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
-                android:background="@color/colorAccent"
+                android:background="#4E534E"
                 android:clickable="true"
-                android:text="Save" />
+                android:text="Save"
+                android:textColor="#50C878" />
 
 
         </LinearLayout>
