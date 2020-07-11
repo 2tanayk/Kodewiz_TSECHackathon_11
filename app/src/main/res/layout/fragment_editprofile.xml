@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
 
 
     <EditText
@@ -20,7 +21,10 @@
         app:layout_constraintBottom_toTopOf="@+id/phone_Number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#50C878"
+        android:textColorHint="#50C878"
+        />
 
     <EditText
         android:id="@+id/phone_Number"
@@ -34,7 +38,9 @@
         app:layout_constraintBottom_toTopOf="@+id/address"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name23" />
+        app:layout_constraintTop_toBottomOf="@+id/name23"
+        android:textColor="#50C878"
+        android:textColorHint="#50C878"/>
 
     <EditText
         android:id="@+id/address"
@@ -48,17 +54,23 @@
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone_Number" />
+        app:layout_constraintTop_toBottomOf="@+id/phone_Number"
+        android:textColor="#50C878"
+        android:textColorHint="#50C878"/>
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="150dp"
+        android:background="#4E534E"
         android:text="Submit"
+        android:textColor="#50C878"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address" />
 </androidx.constraintlayout.widget.ConstraintLayout>

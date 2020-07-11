@@ -5,17 +5,16 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="2dp"
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    tools:openDrawer="start"
+    android:background="@color/colorPrimaryDark">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".CustomerActivity"
-    android:padding="5dp"
-    android:layout_margin="5dp">
+    android:background="@color/colorPrimaryDark">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -29,6 +28,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/customerRV"
+        android:background="@color/colorPrimaryDark"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="5dp"
@@ -37,8 +37,10 @@
 </LinearLayout>
      <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+         android:layout_width="wrap_content"
+         android:background="#4E534E"
+        app:itemTextColor="#50C878"
+         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/drawer_menu" />
