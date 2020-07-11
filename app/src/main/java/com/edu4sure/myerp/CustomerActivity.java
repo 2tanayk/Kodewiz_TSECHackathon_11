@@ -28,6 +28,7 @@ public class CustomerActivity extends AppCompatActivity {
     CustomerAdapter cAdapter;
     private DrawerLayout drawer;
     Intent intent1;
+    public static int posn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -120,6 +121,14 @@ public class CustomerActivity extends AppCompatActivity {
         cAdapter =new CustomerAdapter(this,list);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
         recyclerView.setAdapter(cAdapter);
+
+        cAdapter.setOnItemClickListener(new CustomerAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                posn=position;
+                //Toast.makeText(getApplicationContext(),position+"",Toast.LENGTH_SHORT).show();
+            }
+        });
     }//fill ends
 
     @Override
