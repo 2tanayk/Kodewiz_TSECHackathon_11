@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -9,11 +10,11 @@
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_alignParentTop="true"
         android:layout_above="@+id/phone_Number"
-        android:layout_marginTop="150dp"
-        android:layout_marginRight="24dp"
+        android:layout_alignParentTop="true"
         android:layout_marginLeft="24dp"
+        android:layout_marginTop="141dp"
+        android:layout_marginRight="24dp"
         android:hint="Enter Name" />
 
     <EditText
@@ -36,7 +37,7 @@
         android:layout_marginTop="155dp"
         android:layout_marginRight="24dp"
         android:layout_marginBottom="139dp"
-        android:hint="Feedbacl" />
+        android:hint="Feedback" />
 
     <EditText
 
@@ -51,16 +52,18 @@
         android:layout_marginRight="24dp"
         android:layout_marginBottom="-235dp"
         android:hint="Enter Rating out of 5 :"
-        android:inputType="number" />
+        android:inputType="number"
+        tools:visibility="visible" />
 
     <Button
         android:id="@+id/button56"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:text="Submit"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="24dp"
         android:layout_marginLeft="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="24dp"
         android:layout_marginBottom="150dp"
-        android:layout_marginTop="20dp"/>
+        android:text="Submit"
+        tools:visibility="visible" />
 </RelativeLayout>
