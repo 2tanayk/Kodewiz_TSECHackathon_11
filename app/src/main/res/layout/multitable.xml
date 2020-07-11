@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="20dp"
@@ -13,6 +11,7 @@
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
+        android:textColor = "#50C878"
         android:padding="10dp"
         android:text="hey"
         android:textSize="10dp"
@@ -26,6 +25,7 @@
         android:layout_gravity="center"
         android:padding="10dp"
         android:text="hey"
+        android:textColor = "#50C878"
         android:textSize="10dp"
         android:textAlignment="center"
         android:fontFamily="sans-serif-black" />
@@ -37,6 +37,7 @@
         android:layout_gravity="center"
         android:padding="10dp"
         android:text="hey"
+        android:textColor = "#50C878"
         android:textSize="10dp"
         android:textAlignment="center"
         android:fontFamily="sans-serif-black" />
@@ -47,7 +48,8 @@
         android:layout_gravity="center"
         android:padding="10dp"
         android:text="hey"
-        android:textSize="10dp"
+        android:textSize="20dp"
+        android:textColor = "#50C878"
         android:textAlignment="center"
         android:fontFamily="sans-serif-black" />
 

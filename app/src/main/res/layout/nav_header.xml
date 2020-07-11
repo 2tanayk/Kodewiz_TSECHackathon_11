@@ -3,7 +3,7 @@
     android:id="@+id/NavLL"
     android:layout_width="match_parent"
     android:layout_height="176dp"
-    android:background="#03A9F4"
+    android:background="#50C878"
     android:gravity="bottom"
     android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"

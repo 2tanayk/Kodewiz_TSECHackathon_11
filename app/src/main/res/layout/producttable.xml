@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="20dp"
@@ -18,7 +16,8 @@
         android:text="hey"
         android:textSize="10dp"
         android:textAlignment="center"
-        android:fontFamily="sans-serif-black"/>
+        android:fontFamily="sans-serif-black"
+        android:textColor = "#50C878"/>
 
     <TextView
         android:id="@+id/t2"
@@ -29,7 +28,8 @@
         android:text="hey"
         android:textSize="10dp"
         android:textAlignment="center"
-        android:fontFamily="sans-serif-black"/>
+        android:fontFamily="sans-serif-black"
+        android:textColor = "#50C878"/>
 
     <TextView
         android:id="@+id/t3"
@@ -40,7 +40,8 @@
         android:text="hey"
         android:textSize="10dp"
         android:textAlignment="center"
-        android:fontFamily="sans-serif-black" />
+        android:fontFamily="sans-serif-black"
+        android:textColor = "#50C878"/>
     <TextView
         android:id="@+id/t4"
         android:layout_width="80dp"
@@ -50,6 +51,7 @@
         android:text="hey"
         android:textSize="10dp"
         android:textAlignment="center"
-        android:fontFamily="sans-serif-black" />
+        android:fontFamily="sans-serif-black"
+        android:textColor = "#50C878"/>
 
 </LinearLayout>

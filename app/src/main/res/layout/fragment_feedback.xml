@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -8,83 +9,71 @@
 
     <EditText
         android:id="@+id/name23"
-        android:layout_width="347dp"
-        android:layout_height="81dp"
-        android:layout_above="@+id/phone_Number"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="90dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
+        android:layout_marginBottom="18dp"
         android:hint="Enter Name"
-        android:visibility="visible" />
+        app:layout_constraintBottom_toTopOf="@+id/fId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/customerId"
-        android:layout_width="345dp"
-        android:layout_height="84dp"
-        android:layout_above="@+id/address"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
         android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="42dp"
-        android:layout_marginRight="24dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="18dp"
         android:hint="id"
-        android:visibility="visible" />
+        app:layout_constraintBottom_toTopOf="@+id/feedback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fId" />
 
     <EditText
         android:id="@+id/fId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/button56"
-        android:layout_below="@id/customerId"
-        android:layout_alignTop="@+id/name23"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="23dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="262dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="94dp"
-        android:hint="Feedbacl"
-        android:visibility="visible" />
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="18dp"
+        android:hint="Feedback"
+        app:layout_constraintBottom_toTopOf="@+id/customerId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name23" />
 
-    <EditText
+    <RatingBar
 
         android:id="@+id/feedback"
-        android:layout_width="368dp"
-        android:layout_height="95dp"
-        android:layout_above="@+id/button56"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="209dp"
-        android:hint="Enter Rating out of 5 :"
-        android:inputType="number"
-        android:visibility="visible" />
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/button56"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customerId" />
 
     <Button
         android:id="@+id/button56"
-        android:layout_width="360dp"
-        android:layout_height="75dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="59dp"
-        android:text="Submit" />
-</RelativeLayout>
+        android:layout_width="380dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="90dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feedback" />
+</androidx.constraintlayout.widget.ConstraintLayout>
