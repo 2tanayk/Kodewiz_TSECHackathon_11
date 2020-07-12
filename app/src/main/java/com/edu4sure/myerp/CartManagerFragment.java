@@ -18,9 +18,10 @@ import java.util.zip.Inflater;
 
 public class CartManagerFragment extends Fragment {
     ListView cList;
-    List<Integer> img;
-    List<String> cTxt;
-    List<String> cQty;
+    public static List<Integer> img=new ArrayList<>();
+    public static List<String> cTxt=new ArrayList<>();
+    public static List<String> cQty=new ArrayList<>();
+
 
     @Nullable
     @Override
@@ -39,13 +40,14 @@ public class CartManagerFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        img=new ArrayList<>();
-        cTxt=new ArrayList<>();
-        cQty=new ArrayList<>();
+//        img=new ArrayList<>();
+//        cTxt=new ArrayList<>();
+//        cQty=new ArrayList<>();
 
-        img.add(R.drawable.laptop);
-        cTxt.add("Laptop");
-        cQty.add("2");
+//        img.add(R.drawable.laptop);
+//        cTxt.add("Laptop");
+//        cQty.add("2");
+
 
     }
 }

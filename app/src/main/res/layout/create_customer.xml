@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customCV"
     android:layout_width="match_parent"
     android:layout_height="300dp"
-    android:id="@+id/customCV"
-    android:padding="10dp"
-    android:layout_margin="5dp">
+    android:layout_margin="5dp"
+    android:backgroundTint="#ABF6AE"
+    android:padding="10dp">
 
     <LinearLayout
         android:id="@+id/customerLL"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="5dp"
-        android:background="#FFFFFF"
+        android:background="#ABF6AE"
         android:orientation="vertical"
         android:padding="5dp">
 
@@ -32,16 +32,16 @@
             android:text="Smart TV"
             android:textStyle="bold" />
 
-            <ImageButton
-                android:id="@+id/cartBtn"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
-                android:backgroundTint="#FFFFFF"
-                android:gravity="center"
-                android:src="@drawable/ic_baseline_add_shopping_cart_24"
-                android:visibility="visible" />
+        <ImageButton
+            android:id="@+id/cartBtn"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:backgroundTint="#F6BD69"
+            android:gravity="center"
+            android:src="@drawable/ic_baseline_add_shopping_cart_24"
+            android:visibility="visible" />
 
     </LinearLayout>
 

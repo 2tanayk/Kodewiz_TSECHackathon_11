@@ -19,6 +19,7 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.MyView
     private OnItemClickListener mListener;
     public interface OnItemClickListener {
         void onItemClick(int position);
+        void onAddToCartClick(int position);
     }
     public void setOnItemClickListener(OnItemClickListener listener) {
         mListener = listener;
@@ -56,10 +57,12 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.MyView
     {
         private ImageView img;
         private TextView txt;
+        private ImageButton ib;
         public MyViewHolder(@NonNull View itemView,final OnItemClickListener listener) {
             super(itemView);
             img=itemView.findViewById(R.id.customerImg);
             txt=itemView.findViewById(R.id.customerTextView);
+            ib=itemView.findViewById(R.id.cartBtn);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -73,6 +76,18 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.MyView
                         }
                     }
 
+                }
+            });
+
+            ib.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (listener != null) {
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION) {
+                            listener.onAddToCartClick(position);
+                        }
+                    }
                 }
             });
 
